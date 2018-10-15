@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" 
+    name="compliancereport" 
+    pageWidth="595" pageHeight="842" 
+    columnWidth="555" 
+    leftMargin="0" 
+    rightMargin="0" topMargin="0" 
+    bottomMargin="0"
+    isSummaryNewPage="true"
+    isSummaryWithPageHeaderAndFooter="true"
+    whenNoDataType="NoDataSection">
+    
+    <style name="CoverTitle" forecolor="#1f3d7a">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style backcolor="#aabbcc"/>
+        </conditionalStyle>
+    </style>
+    
+    <style name="CoverSubTitle" forecolor="#1f497d">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style backcolor="#aabbcc"/>
+        </conditionalStyle>
+    </style> 
+    
+    <style name="Content" forecolor="#0000e6" isBold="true">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style backcolor="#aabbcc"/>
+        </conditionalStyle>
+    </style>   
+        
+    <style name="Deepblue" forecolor="#3C699B">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style backcolor="#aabbcc"/>
+        </conditionalStyle>
+    </style>
+    <style name="Lightblue" forecolor="#3385ff">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style backcolor="#aabbcc"/>
+        </conditionalStyle>
+    </style>  
+    <style name="Executivesummary" fontSize="14" forecolor="#3C699B">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style backcolor="#aabbcc"/>
+        </conditionalStyle>
+    </style> 
+    <style name="TableCategory" fontSize="11" forecolor="#000000">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style backcolor="#aabbcc"/>
+        </conditionalStyle>
+    </style> 
+    <style name="Gray" forecolor="#808080">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style backcolor="#aabbcc"/>
+        </conditionalStyle>
+    </style> 
+    
+    <style name="ValueDeepBlue" forecolor="#1F497D"  fontSize="24" isBold="true">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style isBold="true"/>
+        </conditionalStyle>
+    </style>
+    <style name="White" forecolor="#ffffff"  fontSize="11" isBold="true">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style isBold="true"/>
+        </conditionalStyle>
+    </style>
+        <style name="Descriptioncategory" fontSize="12" forecolor="#1f3d7a">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style backcolor="#aabbcc"/>
+        </conditionalStyle>
+    </style>  
+    <style name="Descriptioncontent" fontSize="11" forecolor="#1f3d7a">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style backcolor="#aabbcc"/>
+        </conditionalStyle>
+    </style> 
+    
+    <parameter name = "Date" class = "java.lang.String"/>
+    <parameter name = "Company" class = "java.lang.String"/>
+    <parameter name = "CompanyCover" class = "java.lang.String"/>
+    <parameter name = "CompanyLogo" class = "java.lang.String"/>
+    <parameter name = "DateRange" class = "java.lang.String"/>
+    <parameter name = "CloudApplication" class = "java.lang.String"/>    
+    <parameter name = "Background" class = "java.lang.String"/>    
+    <parameter name = "Reporttitle" class = "java.lang.String"/>
+    
+    <parameter name = "PolicyEnable" class = "java.lang.String"/>
+    <parameter name = "Donut1path" class = "java.lang.String"/>
+
+    
+    <parameter name = "ResourcesMonitored" class = "java.lang.String"/>
+    <parameter name = "Donut2path" class = "java.lang.String"/>
+   
+    <parameter name="Tablecolumn1" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>     
+    <parameter name="Table1" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>     
+    <parameter name="Table2" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/> 
+    <parameter name="Table3" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>  
+ 
+    
+    <field name="Table1" class="java.util.List">
+        <fieldDescription><![CDATA[table1]]></fieldDescription>
+    </field>
+    <field name="Table2" class="java.util.List">
+        <fieldDescription><![CDATA[table2]]></fieldDescription>
+    </field>   
+    <field name="Table3" class="java.util.List">
+        <fieldDescription><![CDATA[table3]]></fieldDescription>
+    </field>
+    <field name="Table4" class="java.util.List">
+        <fieldDescription><![CDATA[table4]]></fieldDescription>
+    </field>    
+    <field name="Table5" class="java.util.List">
+        <fieldDescription><![CDATA[table5]]></fieldDescription>
+    </field>
+    <field name="Table6" class="java.util.List">
+        <fieldDescription><![CDATA[table6]]></fieldDescription>
+    </field>   
+    <field name="Table7" class="java.util.List">
+        <fieldDescription><![CDATA[table7]]></fieldDescription>
+    </field>
+    <field name="Table8" class="java.util.List">
+        <fieldDescription><![CDATA[table8]]></fieldDescription>
+    </field>   
+    <field name="Table9" class="java.util.List">
+        <fieldDescription><![CDATA[table9]]></fieldDescription>
+    </field>
+    <field name="Table10" class="java.util.List">
+        <fieldDescription><![CDATA[table11]]></fieldDescription>
+    </field>   
+    <field name="Table11" class="java.util.List">
+        <fieldDescription><![CDATA[table11]]></fieldDescription>
+    </field>
+    <field name="Table12" class="java.util.List">
+        <fieldDescription><![CDATA[table12]]></fieldDescription>
+    </field>    
+    <field name="Table13" class="java.util.List">
+        <fieldDescription><![CDATA[table13]]></fieldDescription>
+    </field>
+    <field name="Table14" class="java.util.List">
+        <fieldDescription><![CDATA[table14]]></fieldDescription>
+    </field>   
+    <field name="Table15" class="java.util.List">
+        <fieldDescription><![CDATA[table15]]></fieldDescription>
+    </field>
+    <field name="Table16" class="java.util.List">
+        <fieldDescription><![CDATA[table16]]></fieldDescription>
+    </field>       
+    <field name="Table17" class="java.util.List">
+        <fieldDescription><![CDATA[table17]]></fieldDescription>
+    </field>
+    <field name="Table18" class="java.util.List">
+        <fieldDescription><![CDATA[table18]]></fieldDescription>
+    </field>   
+    <field name="Table19" class="java.util.List">
+        <fieldDescription><![CDATA[table19]]></fieldDescription>
+    </field>
+    <field name="Table20" class="java.util.List">
+        <fieldDescription><![CDATA[table20]]></fieldDescription>
+    </field>       
+
+    <background>
+        <band height="842" splitType="Stretch">
+            <image  scaleImage="FillFrame" vAlign="Middle" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+            <reportElement x="0" y="0" width="595" height="842">
+                <printWhenExpression><![CDATA[new Boolean(($V{PAGE_NUMBER}.intValue())==1)]]></printWhenExpression>
+            </reportElement>
+            <box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+            <graphicElement stretchType="NoStretch"/> 
+            <imageExpression class="java.lang.String"><![CDATA[$P{Background}]]></imageExpression>
+            </image>   
+        </band>
+    </background>
+   
+    <title>
+      <band height = "690">
+             
+       <textField>
+            <reportElement  x = "0" y = "60" width = "595" height = "210"/>
+                <textElement textAlignment="Center" verticalAlignment = "Middle"/>
+                <textFieldExpression>
+                    <![CDATA[""]]>
+                </textFieldExpression>    
+         </textField>  
+                           
+        <image  scaleImage="RetainShape" vAlign="Middle" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+            <reportElement x="0" y="270" width="595" height="90">
+                <printWhenExpression><![CDATA[new Boolean(($V{PAGE_NUMBER}.intValue())==1)]]></printWhenExpression>
+            </reportElement>
+            <box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+            <graphicElement stretchType="NoStretch"/>
+            <imageExpression class="java.lang.String"><![CDATA[$P{CompanyCover}]]></imageExpression>
+        </image>       
+         <textField isBlankWhenNull = "true">
+            <reportElement style="CoverTitle" x = "50" y = "360" width = "505" height = "50"/>
+            
+            <textElement textAlignment = "Left">
+               <font size = "35"/>
+            </textElement>
+            
+            <textFieldExpression class = "java.lang.String">
+               <![CDATA[$P{Reporttitle}]]>
+            </textFieldExpression>
+         </textField>
+       
+         <textField isBlankWhenNull = "true" isStretchWithOverflow="true">
+            <reportElement style="CoverSubTitle" x = "50" y = "410" width = "455" height = "25"/>
+            
+            <textElement>
+               <font size = "16"/>
+            </textElement>
+            
+            <textFieldExpression class = "java.lang.String">
+               <![CDATA["Prepared for "+$P{Company}]]>
+            </textFieldExpression>
+         </textField>
+         
+         <textField isBlankWhenNull = "true" isStretchWithOverflow="true">
+            <reportElement style="CoverSubTitle" x = "50" y = "450" width = "455" height = "25" positionType="FixRelativeToBottom"/>
+            
+            <textElement >
+               <font size = "12"/>
+            </textElement>
+            
+            <textFieldExpression class = "java.lang.String">
+               <![CDATA["Created on : "+$P{Date}]]>
+            </textFieldExpression>
+         </textField>
+         <textField isBlankWhenNull = "true" isStretchWithOverflow="true">
+            <reportElement style="CoverSubTitle" x = "50" y = "475" width = "455" height = "25" positionType="FixRelativeToBottom"/>
+            
+            <textElement >
+               <font size = "12"/>
+            </textElement>
+            
+            <textFieldExpression class = "java.lang.String">
+               <![CDATA["Date range :"+$P{DateRange}]]>
+            </textFieldExpression>
+         </textField>
+         <textField isBlankWhenNull = "true" isStretchWithOverflow="true">
+            <reportElement style="CoverSubTitle" x = "50" y = "500" width = "455" height = "25" positionType="FixRelativeToBottom"/>
+            
+            <textElement >
+               <font size = "12"/>
+            </textElement>
+            
+            <textFieldExpression class = "java.lang.String">
+               <![CDATA["Cloud application: "+$P{CloudApplication}]]>
+            </textFieldExpression>
+         </textField>
+                                  
+     </band>
+    </title>  
+   <pageHeader>
+        <band height="80">
+            <textField>
+                <reportElement x = "0" y = "0" width = "595" height = "30"/>
+                    <textFieldExpression>
+                        <![CDATA[""]]>
+                    </textFieldExpression>    
+             </textField>         
+            <image  scaleImage="RetainShape" vAlign="Middle" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+                <reportElement  x="450" y="30" width="100" height="29" mode="Opaque">
+                    <printWhenExpression><![CDATA[new Boolean(($V{PAGE_NUMBER}.intValue())!=1)]]></printWhenExpression>
+                </reportElement>
+                <box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+                <graphicElement stretchType="NoStretch"/>
+                <imageExpression class="java.lang.String"><![CDATA[$P{CompanyLogo}]]></imageExpression>
+            </image>
+            <line>
+                <reportElement x = "20" y = "59" width = "555" height = "1" forecolor="#0099ff">
+                    <printWhenExpression><![CDATA[new Boolean(($V{PAGE_NUMBER}.intValue())!=1)]]></printWhenExpression>
+                </reportElement>
+            </line>
+        </band>
+    </pageHeader>
+    
+    <detail>  
+       <band height="30" splitType="Prevent"> 
+            <textField isStretchWithOverflow="true">
+               <reportElement style="Executivesummary" x = "30" y = "0" width = "520" height = "20"/>
+                   <textFieldExpression>
+                       <![CDATA["Executive Summary"]]>
+                   </textFieldExpression>    
+            </textField>          
+       </band> 
+       <band height="10" splitType="Prevent"> 
+            <subreport>
+                   <reportElement x="20" y="9" width="520" height="1" isRemoveLineWhenBlank="true">
+                    </reportElement>                             
+                   <dataSourceExpression>
+                       new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{Table1})
+                   </dataSourceExpression>
+                   <subreportExpression class="net.sf.jasperreports.engine.JasperReport">
+                       <![CDATA[$P{Tablecolumn1}]]>
+                   </subreportExpression>
+             </subreport>               
+       </band>          
+      
+       <band height="30" splitType="Prevent"> 
+            <textField isStretchWithOverflow="true">
+               <reportElement style="Executivesummary" x = "30" y = "0" width = "520" height = "20"/>
+                   <textFieldExpression>
+                       <![CDATA[" "]]>
+                   </textFieldExpression>    
+            </textField>          
+       </band>
+       <band height="30" splitType="Prevent"> 
+            <textField isStretchWithOverflow="true">
+               <reportElement style="Executivesummary" x = "30" y = "0" width = "520" height = "20"/>
+                   <textFieldExpression>
+                       <![CDATA["Executive Summary"]]>
+                   </textFieldExpression>    
+            </textField>          
+       </band>        
+       <band height="10" splitType="Prevent"> 
+            <subreport>
+                   <reportElement x="20" y="9" width="520" height="1" isRemoveLineWhenBlank="true">
+                    </reportElement>                             
+                   <dataSourceExpression>
+                       new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{Table1})
+                   </dataSourceExpression>
+                   <subreportExpression class="net.sf.jasperreports.engine.JasperReport">
+                       <![CDATA[$P{Tablecolumn1}]]>
+                   </subreportExpression>
+             </subreport>               
+       </band>  
+       
+<!--       
+           
+            <textField isStretchWithOverflow="true">
+                <reportElement style="ValueDeepBlue" x="20" y="40" width="110" height="50" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#f0f0f5"/>
+                <textElement textAlignment = "Center" verticalAlignment="Middle">
+                </textElement> 
+                <textFieldExpression><![CDATA[$P{PolicyEnable}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style="Gray" x="20" y="90" width="110" height="50" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#f0f0f5"/>
+
+                <textElement textAlignment = "Center" verticalAlignment="Top">
+                </textElement> 
+                <textFieldExpression><![CDATA["Polices Enabled"]]></textFieldExpression>
+            </textField>  
+            <textField isStretchWithOverflow="true">
+                <reportElement style="Gray" x="130" y="40" width="160" height="10" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#f0f0f5"/>
+
+                <textElement textAlignment = "Center" verticalAlignment="Top">
+                </textElement> 
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>                         
+            <image  scaleImage="RetainShape" vAlign="Middle" hAlign="Left" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+                <reportElement x="130" y="50" width="160" height="90" mode="Opaque" backcolor="#f0f0f5">
+                </reportElement>  
+                <graphicElement stretchType="NoStretch"/>
+                <imageExpression class="java.lang.String"><![CDATA[$P{Donut1path}]]></imageExpression>
+            </image>                                                  
+ 
+
+            <textField isStretchWithOverflow="true">
+                <reportElement x="20" y="140" width="550" height="30" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#ffffff"/>
+
+                <textElement textAlignment = "Center" verticalAlignment="Top">
+                </textElement> 
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>             
+            <textField isStretchWithOverflow="true">
+               <reportElement style="TableCategory" x = "30" y = "170" width = "520" height = "20"/>                        
+                   <textFieldExpression>
+                       <![CDATA["A.6 Organization of Information Security"]]>
+                   </textFieldExpression>    
+            </textField>                                                                                            
+        </band>      
+       <band height="1" splitType="Prevent"> 
+            <subreport>
+                   <reportElement x="20" y="0" width="520" height="1" isRemoveLineWhenBlank="true">
+                    </reportElement>                             
+                   <dataSourceExpression>
+                       new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{TableA6})
+                   </dataSourceExpression>
+                   <subreportExpression class="net.sf.jasperreports.engine.JasperReport">
+                       <![CDATA[$P{Table1Report1}]]>
+                   </subreportExpression>
+             </subreport>               
+       </band>
+-->                                                                                                                                                                                                                                                                                                                                               
+    </detail>
+   
+    <pageFooter>
+        <band height="72">
+            <line>
+                <reportElement x = "20" y = "0" width = "555" height = "1" forecolor="#cccccc">
+                    <printWhenExpression><![CDATA[new Boolean(($V{PAGE_NUMBER}.intValue())!=1)]]>
+                    </printWhenExpression>                 
+
+                </reportElement>                  
+            </line> 
+            <textField>
+                <reportElement x="20" y="20" width="260" height="30">
+                    <printWhenExpression><![CDATA[new Boolean(($V{PAGE_NUMBER}.intValue())!=1)]]>
+                    </printWhenExpression>                 
+                </reportElement>                    
+                <textElement textAlignment = "Left">
+                    <font size = "10"/>
+                </textElement>
+                <textFieldExpression>
+                    <![CDATA["ISO 27001 Compliance Report"]]>
+                </textFieldExpression>                              
+            </textField>
+           
+            <textField>
+                <reportElement  x="280" y="20" width="295" height="30">      
+                </reportElement>                    
+                <textElement textAlignment = "Right">
+                    <font size = "10"/>
+                </textElement>
+                <textFieldExpression>
+                    <![CDATA["${CURRENT_PAGE_NUMBER}"]]>
+                </textFieldExpression>                              
+            </textField>    
+            <textField evaluationTime="Report">
+                <reportElement  x="575" y="20" width="18" height="30">         
+                </reportElement>                    
+                <textElement textAlignment = "Left">
+                    <font size = "10"/>
+                </textElement>
+                <textFieldExpression class = "java.lang.String">
+                    <![CDATA["${TOTAL_PAGE_NUMBER}"]]>
+                </textFieldExpression>                              
+            </textField> 
+        </band>
+    </pageFooter>   
+</jasperReport>

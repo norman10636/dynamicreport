@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" 
+               name="employee_report" pageWidth="555" pageHeight="842" 
+              columnWidth="555" leftMargin="0" 
+              rightMargin="0" topMargin="0" bottomMargin="0"
+              whenNoDataType="NoDataSection" >
+    
+    <style name="White" forecolor="#ffffff"  fontSize="11" isBold="true">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style isBold="true"/>
+        </conditionalStyle>
+    </style>
+
+    <style name="Mail" forecolor="#0000ff"  fontSize="11" isUnderline="true">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style isUnderline="true"/>
+        </conditionalStyle>
+    </style>    
+    <style name="Content" forecolor="#000000"  fontSize="10" isBold="true">
+        <conditionalStyle>
+            <conditionExpression/>
+            <style isBold="true"/>
+        </conditionalStyle>
+    </style>
+     
+    <field name="Column1Name" class="java.lang.String">
+        <fieldDescription><![CDATA[column1Name]]></fieldDescription>
+    </field>
+    <field name="Column2Name" class="java.lang.String">
+        <fieldDescription><![CDATA[column2Name]]></fieldDescription>
+    </field>
+    <field name="Column3Name" class="java.lang.String">
+        <fieldDescription><![CDATA[column3Name]]></fieldDescription>
+    </field>
+    <field name="Column4Name" class="java.lang.String">
+        <fieldDescription><![CDATA[column4Name]]></fieldDescription>
+    </field>
+    <field name="Column1" class="java.lang.String">
+        <fieldDescription><![CDATA[column1]]></fieldDescription>
+    </field>
+    <field name="Column2" class="java.lang.String">
+        <fieldDescription><![CDATA[column2]]></fieldDescription>
+    </field> 
+    <field name="Column3" class="java.lang.String">
+        <fieldDescription><![CDATA[column3]]></fieldDescription>
+    </field>
+    <field name="Column4" class="java.lang.String">
+        <fieldDescription><![CDATA[column4]]></fieldDescription>
+    </field>    
+
+      
+    <columnHeader>
+        <band height="16" splitType="Prevent"> 
+            <textField isStretchWithOverflow="true">
+                <reportElement style="White" x="0" y="0" width="6" height="16" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#4f80bd"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.5" lineColor="#4f80bd"/>
+                </box> 
+                <textElement textAlignment="Center">
+                    <font size = "10"/>
+                </textElement> 
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>                    
+            <textField isStretchWithOverflow="true">
+                <reportElement style="White" x="6" y="0" width="131" height="16" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#4f80bd"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.5" lineColor="#4f80bd"/>
+                </box> 
+                <textElement textAlignment="Left">
+                    <font size = "10"/>
+                </textElement> 
+                <textFieldExpression><![CDATA[$F{Column1Name}]]></textFieldExpression>
+            </textField>     
+            <textField isStretchWithOverflow="true">
+                <reportElement style="White" x="137" y="0" width="6" height="16" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#4f80bd"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.5" lineColor="#4f80bd"/>
+                </box> 
+                <textElement textAlignment="Center">
+                    <font size = "10"/>
+                </textElement> 
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>                 
+            <textField isStretchWithOverflow="true">
+                <reportElement style="White" x="143" y="0" width="131" height="16" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#4f80bd"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.5" lineColor="#4f80bd"/>
+                </box>   
+                <textElement textAlignment="Left"> 
+                    <font size = "10"/>
+                </textElement>                                 
+                <textFieldExpression><![CDATA[$F{Column2Name}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style="White" x="274" y="0" width="6" height="16" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#4f80bd"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.5" lineColor="#4f80bd"/>
+                </box> 
+                <textElement textAlignment="Center">
+                    <font size = "10"/>
+                </textElement> 
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>              
+            <textField isStretchWithOverflow="true">
+                <reportElement style="White" x="280" y="0" width="131" height="16" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#4f80bd"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.5" lineColor="#4f80bd"/>
+                </box>   
+                <textElement textAlignment="Left">
+                    <font size = "10"/>    
+                </textElement>                                  
+                <textFieldExpression><![CDATA[$F{Column3Name}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style="White" x="411" y="0" width="6" height="16" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#4f80bd"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.5" lineColor="#4f80bd"/>
+                </box> 
+                <textElement textAlignment="Center">
+                    <font size = "10"/>
+                </textElement> 
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>              
+            <textField isStretchWithOverflow="true">
+                <reportElement style="White" x="417" y="0" width="133" height="16" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#4f80bd"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.5" lineColor="#4f80bd"/>
+                </box>   
+                <textElement textAlignment="Left">
+                    <font size = "10"/>
+                </textElement>                                  
+                <textFieldExpression><![CDATA[$F{Column4Name}]]></textFieldExpression>
+            </textField>       
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20" splitType="Prevent">       
+            <textField isStretchWithOverflow="true">
+                <reportElement style="White" x="0" y="0" width="6" height="20" stretchType="RelativeToTallestObject" mode="Opaque" backcolor="#ffffff"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.0" lineColor="#ffffff"/>
+                </box> 
+                <textElement textAlignment="Center">
+                    <font size = "10"/>
+                </textElement> 
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>        
+            <textField isStretchWithOverflow="true">
+                <reportElement style ="Content" x="6" y="0" width="131" height="20" stretchType="RelativeToTallestObject" mode="Opaque" />
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.0" lineColor="#ffffff"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.0" lineColor="#ffffff"/>
+                </box> 
+                <textElement textAlignment="Left">
+                    <font size = "10"/>    
+                </textElement> 
+                <textFieldExpression><![CDATA[$F{Column1}]]></textFieldExpression>
+            </textField>  
+            <textField isStretchWithOverflow="true">
+                <reportElement style ="Content" x="137" y="0" width="6" height="20" stretchType="RelativeToTallestObject" mode="Opaque" />
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.0" lineColor="#ffffff"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.0" lineColor="#ffffff"/>
+                </box> 
+                <textElement textAlignment="Center">
+                    <font size = "10"/>    
+                </textElement> 
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>                    
+            <textField isStretchWithOverflow="true">
+                <reportElement style ="Content" x="143" y="0" width="131" height="20" stretchType="RelativeToTallestObject" mode="Opaque"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.0" lineColor="#ffffff"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.0" lineColor="#ffffff"/>
+                </box>   
+                <textElement textAlignment="Left"> 
+                    <font size = "10"/>
+                </textElement>                                 
+                <textFieldExpression><![CDATA[$F{Column2}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style ="Content" x="274" y="0" width="6" height="20" stretchType="RelativeToTallestObject" mode="Opaque" />
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.0" lineColor="#ffffff"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.0" lineColor="#ffffff"/>
+                </box> 
+                <textElement textAlignment="Center">
+                    <font size = "10"/>    
+                </textElement> 
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>            
+            <textField isStretchWithOverflow="true">
+                <reportElement style ="Content" x="280" y="0" width="131" height="20" stretchType="RelativeToTallestObject" mode="Opaque"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.0" lineColor="#ffffff"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.0" lineColor="#ffffff"/>
+                </box>   
+                <textElement textAlignment="Left">
+                    <font size = "10"/>    
+                </textElement>                                  
+                <textFieldExpression><![CDATA[$F{Column3}]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style ="Content" x="411" y="0" width="6" height="20" stretchType="RelativeToTallestObject" mode="Opaque" />
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.0" lineColor="#ffffff"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.0" lineColor="#ffffff"/>
+                </box> 
+                <textElement textAlignment="Center">
+                    <font size = "10"/>    
+                </textElement> 
+                <textFieldExpression><![CDATA[" "]]></textFieldExpression>
+            </textField>
+            <textField isStretchWithOverflow="true">
+                <reportElement style ="Content" x="417" y="0" width="133" height="20" stretchType="RelativeToTallestObject" mode="Opaque"/>
+                <box>
+                    <pen lineWidth="0.5"/>
+                    <topPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <leftPen lineWidth="0.0" lineColor="#ffffff"/>
+                    <bottomPen lineWidth="0.5" lineColor="#4f80bd"/>
+                    <rightPen lineWidth="0.5" lineColor="#4f80bd"/>
+                </box>   
+                <textElement textAlignment="Left">
+                    <font size = "10"/>   
+                </textElement>                                  
+                <textFieldExpression><![CDATA[$F{Column4}]]></textFieldExpression>
+            </textField>       
+        </band>
+    </detail> 
+   <noData>
+        <band height="145">
+            <staticText>
+                <reportElement x="0" y="0" width="300" height="145"/>
+                <textElement textAlignment="Center" verticalAlignment = "Middle">
+                    <font size = "16"/>
+                </textElement>
+                <text><![CDATA[no data available]]> </text>
+            </staticText>
+        </band>
+    </noData>      
+</jasperReport>
