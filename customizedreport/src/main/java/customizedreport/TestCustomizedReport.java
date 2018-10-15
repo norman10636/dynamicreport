@@ -51,6 +51,9 @@ public class TestCustomizedReport {
 	private ChartService chartService = new ChartService();
 	
 	private String donutChartPath = "./donutchart.jpg";
+	private String pieChartPath = "./piechart.jpg";
+	private String barChartPath = "./barchart.jpg";
+	private String radarChartPath = "./radarchart.jpg";
 	
 	@Before
 	public void beforeTest(){
@@ -71,9 +74,8 @@ public class TestCustomizedReport {
 	public void testCreateDonutChart() {
 		createDonutChart();
 	}
-	
+
 	private void createReportGenerateTemplateByAPI() throws JRException {
-		
         FileWriter fw;
         String title = "Usage of unsanctioned cloud application";
         String titleContext = "The usage of cloudapplication report providevisibility into what cloud apps are being used organization-wide and who is using them. Unsanctioned cloud applications are cloudApplications not approved or monitored by your security organizations. Unsanctioned applications could present a risk to your organization.";
@@ -86,7 +88,12 @@ public class TestCustomizedReport {
         String userInputText7 = "Table6";
         String userInputText8 = "Table7";
         String userInputText9 = "Table8";
-        String chartTitle = "Donut Chart";
+        String donutChartTitle = "Donut Chart";
+        String pieChartTitle = "Pie Chart";
+        String barChartTitle = "Bar Chart";
+        String radarChartTitle = "Radar Chart";
+        String title2 = "IR-5 INCIDENT MONITORING";
+        String title2Context = " The organization tracks and documents information system security incidents.";
         
         createDonutChart();
         
@@ -99,8 +106,14 @@ public class TestCustomizedReport {
 		jRMap.put("UserinputText7", userInputText7);
 		jRMap.put("UserinputText8", userInputText8);
 		jRMap.put("UserinputText9", userInputText9);
-		jRMap.put("Charttitle", chartTitle);
+		jRMap.put("Donutcharttitle", donutChartTitle);
 		jRMap.put("Donutchartpath", donutChartPath);
+		jRMap.put("Piecharttitle", pieChartTitle);
+		jRMap.put("Piechartpath", pieChartPath);
+		jRMap.put("Barcharttitle", barChartTitle);
+		jRMap.put("Barchartpath", barChartPath);
+		jRMap.put("Radarcharttitle", radarChartTitle);
+		jRMap.put("Radarchartpath", radarChartPath);
 		
 		try {
 			fw = new FileWriter(getClass().getClassLoader()
@@ -126,8 +139,16 @@ public class TestCustomizedReport {
 							.append(reportUtil.addParameter("UserinputText9", ParameterType.STRING))
 							.append(reportUtil.addParameter("Titletext", ParameterType.STRING))
 							.append(reportUtil.addParameter("Titlecontent", ParameterType.STRING))
-							.append(reportUtil.addParameter("Charttitle", ParameterType.STRING))
-							.append(reportUtil.addParameter("Donutchartpath", ParameterType.STRING))							
+							.append(reportUtil.addParameter("Title2text", ParameterType.STRING))
+							.append(reportUtil.addParameter("Title2content", ParameterType.STRING))
+							.append(reportUtil.addParameter("Donutcharttitle", ParameterType.STRING))
+							.append(reportUtil.addParameter("Donutchartpath", ParameterType.STRING))	
+							.append(reportUtil.addParameter("Piecharttitle", ParameterType.STRING))
+							.append(reportUtil.addParameter("Piechartpath", ParameterType.STRING))	
+							.append(reportUtil.addParameter("Barcharttitle", ParameterType.STRING))
+							.append(reportUtil.addParameter("Barchartpath", ParameterType.STRING))	
+							.append(reportUtil.addParameter("Radarcharttitle", ParameterType.STRING))
+							.append(reportUtil.addParameter("Radarchartpath", ParameterType.STRING))								
 							.append(reportUtil.addDefaultField())
 							.append(reportUtil.addBackGround())
 							.append(reportUtil.addTitle())
@@ -162,8 +183,21 @@ public class TestCustomizedReport {
 							.append(reportUtil.addText("UserinputText9", "Executivesummary", 30, 20))
 							.append(reportUtil.addTable("Table8", "Tablecolumn8"))			
 							.append(reportUtil.addBlank())
-							.append(reportUtil.addText("Charttitle", "Executivesummary", 30, 20))
+							.append(reportUtil.addText("Donutcharttitle", "Executivesummary", 30, 20))
 							.append(reportUtil.addImage("Donutchartpath", "111111"))	
+							.append(reportUtil.addBlank())
+							.append(reportUtil.addText("Piecharttitle", "Executivesummary", 30, 20))
+							.append(reportUtil.addImage("Piechartpath", "111111"))	
+							.append(reportUtil.addBlank())
+							.append(reportUtil.addBlank())
+							.append(reportUtil.addText("Title2text", "PlainText", 30, 20))
+							.append(reportUtil.addText("Title2content", "Titlecontext", 30, 12))
+							.append(reportUtil.addBlank())
+							.append(reportUtil.addText("Barcharttitle", "Executivesummary", 30, 20))
+							.append(reportUtil.addImage("Barchartpath", "111111"))	
+							.append(reportUtil.addBlank())
+							.append(reportUtil.addText("Radarcharttitle", "Executivesummary", 30, 20))
+							.append(reportUtil.addImage("Radarchartpath", "111111"))	
 							.append(reportUtil.addDetailTail())
 							.append(reportUtil.addPageFooter())
 							.append(reportUtil.addJasperreportTail());
@@ -222,6 +256,8 @@ public class TestCustomizedReport {
 		jRMap.put("Tablecolumn8", tableColumn8);
 		jRMap.put("Titletext", title);
 		jRMap.put("Titlecontent", titleContext);
+		jRMap.put("Title2text", title2);
+		jRMap.put("Title2content", title2Context);
 	
 
 		jRMap.put("Date", "2017-12-13");
@@ -295,11 +331,20 @@ public class TestCustomizedReport {
 	}
 
 	private void createDonutChart() {
-		Map<String, Number> population = new HashMap<String, Number>();
-		population.put("Japan", 100000000);
-		population.put("U.S.A", 300000000);
-		population.put("China", 1600000000);
-		chartService.createDonutChart(population, "", true, "./donutchart.jpg");
+		Map<String, Long> population = new HashMap<String, Long>();
+		population.put("Japan", 100000000l);
+		population.put("U.S.A", 300000000l);
+		population.put("China", 1600000000l);
+		chartService.createPieChart(population, "", true, "./piechart.jpg", PlotType.PIECHART);
+		chartService.createPieChart(population, "", true, "./donutchart.jpg", PlotType.DONUTCHART);
+		chartService.createBarchart(population, "", true, "./barchart.jpg");
+		
+		Map<String, Double> doubleMap = new HashMap<String, Double>();
+		doubleMap.put("USA", 99.0);
+		doubleMap.put("Japan", 58.1);
+		doubleMap.put("China", 30.2);
+		chartService.createRadarChart(doubleMap, "", false, "./radarchart.jpg", 30, false);
+		
 	}
 	
 	private void addDataToCustomizedTableList() {
